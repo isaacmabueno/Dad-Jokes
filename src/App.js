@@ -1,25 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+import { jokes } from './dadJokes.json';
+import DadJoke from './components/DadJoke.jsx'
 
 class App extends Component {
+  constructor(props) {
+  super(props)
+  this.state = {
+    joke: 'click the button to generate a joke!'
+  }
+}
+
+generateJoke() {
+  let joke = jokes[Math.floor(Math.random()*jokes.length)];
+  this.setState({joke: joke});
+}
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="App-header">
+          <h1>Jokes by a dad</h1>
+          <button onClick={() => this.generateJoke()}>Generate/Button</button>
+        </div>
+        <p className="App-intro">
+          <DadJoke joke={this.state.joke} />
+        </p>
+        <small className="github-link">
+          Made with <i className="fa fa-heart"></i> in Chicago
+        </small>
       </div>
     );
   }
