@@ -3,7 +3,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { jokes } from './dadJokes.json';
-import DadJoke from './components/DadJoke.jsx'
+import DadJoke from './components/DadJoke.jsx';
+import dad from './images/dad.png';
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ generateJoke() {
       <div className="App">
         <div className="App-header">
           <h1>Jokes by a dad</h1>
+          <img src={ require('./images/dad.png') } />
           <button onClick={() => this.generateJoke()}>Generate/Button</button>
         </div>
         <p className="App-intro">

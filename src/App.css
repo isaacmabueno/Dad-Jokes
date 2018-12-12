@@ -45,3 +45,10 @@ button:focus {
 .fa-heart {
   color: red;
 }
+img {
+  width: 250px;
+  height: 250px;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+}
