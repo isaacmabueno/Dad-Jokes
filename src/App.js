@@ -23,9 +23,9 @@ generateJoke() {
     return (
       <div className="App">
         <div className="App-header">
-          <h1>Jokes by a dad</h1>
+          <h1>DAD JOKES</h1>
           <img src={ require('./images/dad.png') } />
-          <button onClick={() => this.generateJoke()}>Generate/Button</button>
+          <button onClick={() => this.generateJoke()}>Beer me!</button>
         </div>
         <p className="App-intro">
           <DadJoke joke={this.state.joke} />
