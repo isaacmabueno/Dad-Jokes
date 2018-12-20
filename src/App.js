@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import { jokes } from './dadJokes.json';
 import DadJoke from './components/DadJoke.jsx';
-import dad from './images/dad.png';
 
 class App extends Component {
   constructor(props) {
